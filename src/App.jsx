@@ -56,7 +56,7 @@ function App() {
                       >
                         View NFT
                       </Button>
-                      <TransferNftModal />
+                      <TransferNftModal edition={x.edition} />
                     </Flex>
                   </Box>
                 ))

@@ -1,15 +1,15 @@
 import { Button, Dialog, Flex, Text, TextField } from "@radix-ui/themes";
 import { useState } from "react";
 import useHandleTransfer from "../hooks/useHandleTransfer";
-import app from "../App";
 
-const TransferNftModal = () => {
+const TransferNftModal = (edition) => {
+  console.log(edition);
   const [address, setAddress] = useState("");
   console.log(address);
 
   //   const [edition, setEdition] = useState("");
 
-  const handleTransfer = useHandleTransfer(address, app.edition);
+  const handleTransfer = useHandleTransfer(address, edition.edition);
 
   return (
     <Dialog.Root>
